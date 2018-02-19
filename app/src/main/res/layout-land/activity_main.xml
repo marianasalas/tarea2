@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/activity_main_scroll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iteso.tarea2_app.ActivityMain">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/activity_main_image"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/vintagebike" />
+
+        <RelativeLayout
+            android:id="@+id/activity_main_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/main_padding">
+
+            <TextView
+                android:id="@+id/activity_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Title"
+                android:textSize="25sp"
+                />
+
+            <TextView
+                android:id="@+id/activity_main_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/COLOR"
+                android:textSize="@dimen/main_textSize"
+                android:paddingTop="@dimen/main_padding"
+                android:layout_below="@id/activity_main_title"
+                />
+            <ImageButton
+                android:id="@+id/activity_main_like"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="@dimen/main_padding"
+                android:background="@color/white"
+                android:onClick="like"
+                android:scaleType="centerInside"
+                android:src="@drawable/fblike" />
+
+            <RadioGroup
+                android:id="@+id/activity_main_radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/activity_main_color">
+
+                <RadioButton
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/gray"
+                    />
+                <RadioButton
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:buttonTint="@color/brown"
+
+                    />
+                <RadioButton
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/pink"
+                    />
+                <RadioButton
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"                />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/size_M"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:text="M"
+                android:background="@color/white"
+                android:textColor="@color/colorPrimary"
+                android:layout_margin="12dp"
+                android:layout_below="@id/activity_main_radiogroup"
+                android:onClick="onButtonClicked"
+                />
+            <Button
+                android:id="@+id/size_S"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:text="S"
+                android:background="@color/white"
+                android:textColorHighlight="@color/white"
+                android:layout_margin="12dp"
+                android:layout_below="@id/activity_main_radiogroup"
+                android:layout_toEndOf="@id/size_M"
+                android:onClick="onButtonClicked"
+                />
+            <Button
+                android:id="@+id/size_L"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:text="L"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/white"
+                android:textColorHighlight="@color/white"
+                android:layout_margin="12dp"
+                android:layout_below="@id/activity_main_radiogroup"
+                android:layout_toEndOf="@id/size_S"
+                android:onClick="onButtonClicked"
+                />
+            <Button
+                android:id="@+id/size_XL"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:text="XL"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/white"
+                android:layout_margin="12dp"
+                android:layout_below="@id/activity_main_radiogroup"
+                android:layout_toEndOf="@id/size_L"
+                android:onClick="onButtonClicked"
+                />
+
+            <TextView
+                android:id="@+id/activity_main_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/main_padding"
+                android:text="@string/Description"
+                android:textSize="@dimen/main_textSize"
+                android:layout_below="@id/size_M"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/main_padding"
+                android:text="@string/Descr"
+                android:textSize="@dimen/second_textSize"
+                android:layout_below="@id/activity_main_description"/>
+
+            <TextView
+                android:id="@+id/activity_main_measurement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/main_padding"
+                android:text="@string/Measurement"
+                android:textSize="@dimen/main_textSize"
+                android:layout_below="@id/description"/>
+
+            <TextView
+                android:id="@+id/measurement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/main_padding"
+                android:text="@string/Measure"
+                android:textSize="@dimen/second_textSize"
+                android:layout_below="@id/activity_main_measurement"/>
+
+            <Button
+                android:id="@+id/activity_main_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray_dark"
+                android:text="@string/Cart"
+                android:textSize="@dimen/second_textSize"
+                android:textColor="@color/white"
+                android:paddingTop="@dimen/main_padding"
+                android:layout_below="@id/measurement"
+                android:onClick="onButtonClicked"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
